@@ -32,6 +32,7 @@ class House {
     return this.people;
   }
   addPeople(addMember) {
+    //return this.people = addMember
     return this.people.push(addMember);
   }
 }
@@ -46,20 +47,3 @@ const myHouse = new House("myHouseAddress", 2332412, [person1, person2]);
 console.log(myHouse.getPeople());
 myHouse.addPeople(person3);
 console.log(myHouse.getPeople());
-
-class Programmer extends Person {
-  constructor(name, age, companyName, salary, favLanguage) {
-    super(name, age);
-    this.companyName = companyName;
-    this.salary = salary;
-    this.favLanguage = favLanguage;
-  }
-
-  sayHi() {
-    return `Hii! my name is ${this.name}, I work in ${this.companyName}`;
-  }
-}
-
-const Programmer1 = new Programmer("mano", 24, "N/A", 00, "javascript");
-
-console.log(Programmer1.sayHi());
